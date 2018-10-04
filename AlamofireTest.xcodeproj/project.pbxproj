@@ -12,9 +12,14 @@
 		3396F43F216507D50041147C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3396F43D216507D50041147C /* Main.storyboard */; };
 		3396F441216507D50041147C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3396F440216507D50041147C /* Assets.xcassets */; };
 		3396F444216507D50041147C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3396F442216507D50041147C /* LaunchScreen.storyboard */; };
+		3396F44D21650BDC0041147C /* AlienReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3396F44C21650BDC0041147C /* AlienReport.swift */; };
+		3396F44F21650D6C0041147C /* AlienReporterForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3396F44E21650D6C0041147C /* AlienReporterForm.swift */; };
+		3396F452216520340041147C /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3396F451216520340041147C /* ConnectionManager.swift */; };
+		E6607BC4516AB773A98D36DD /* Pods_AlienReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4135D1AC084089D232E1B7C5 /* Pods_AlienReporter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		31B877D027D87C3338CD4FD3 /* Pods-AlienReporter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlienReporter.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlienReporter/Pods-AlienReporter.release.xcconfig"; sourceTree = "<group>"; };
 		3396F436216507D50041147C /* AlienReporter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlienReporter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3396F439216507D50041147C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3396F43B216507D50041147C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,11 @@
 		3396F440216507D50041147C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3396F443216507D50041147C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3396F445216507D50041147C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3396F44C21650BDC0041147C /* AlienReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlienReport.swift; sourceTree = "<group>"; };
+		3396F44E21650D6C0041147C /* AlienReporterForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlienReporterForm.swift; sourceTree = "<group>"; };
+		3396F451216520340041147C /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
+		4135D1AC084089D232E1B7C5 /* Pods_AlienReporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlienReporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1560F48AF7BFE063CB972B4 /* Pods-AlienReporter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlienReporter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlienReporter/Pods-AlienReporter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6607BC4516AB773A98D36DD /* Pods_AlienReporter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +51,8 @@
 			children = (
 				3396F438216507D50041147C /* AlienReporter */,
 				3396F437216507D50041147C /* Products */,
+				E349A242E68B1A7243D77751 /* Pods */,
+				F581AF7ABC9BD318AE963863 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +67,8 @@
 		3396F438216507D50041147C /* AlienReporter */ = {
 			isa = PBXGroup;
 			children = (
+				3396F4502165202A0041147C /* Connection */,
+				3396F44B21650BB80041147C /* Beans */,
 				3396F439216507D50041147C /* AppDelegate.swift */,
 				3396F43B216507D50041147C /* ViewController.swift */,
 				3396F43D216507D50041147C /* Main.storyboard */,
@@ -64,6 +79,40 @@
 			path = AlienReporter;
 			sourceTree = "<group>";
 		};
+		3396F44B21650BB80041147C /* Beans */ = {
+			isa = PBXGroup;
+			children = (
+				3396F44C21650BDC0041147C /* AlienReport.swift */,
+				3396F44E21650D6C0041147C /* AlienReporterForm.swift */,
+			);
+			path = Beans;
+			sourceTree = "<group>";
+		};
+		3396F4502165202A0041147C /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				3396F451216520340041147C /* ConnectionManager.swift */,
+			);
+			path = Connection;
+			sourceTree = "<group>";
+		};
+		E349A242E68B1A7243D77751 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1560F48AF7BFE063CB972B4 /* Pods-AlienReporter.debug.xcconfig */,
+				31B877D027D87C3338CD4FD3 /* Pods-AlienReporter.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F581AF7ABC9BD318AE963863 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4135D1AC084089D232E1B7C5 /* Pods_AlienReporter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +120,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3396F448216507D50041147C /* Build configuration list for PBXNativeTarget "AlienReporter" */;
 			buildPhases = (
+				CB5F6AAC8B4454DA41B30470 /* [CP] Check Pods Manifest.lock */,
 				3396F432216507D50041147C /* Sources */,
 				3396F433216507D50041147C /* Frameworks */,
 				3396F434216507D50041147C /* Resources */,
+				2669773A1690CC5ACFEAD377 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,12 +181,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2669773A1690CC5ACFEAD377 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AlienReporter/Pods-AlienReporter-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AlienReporter/Pods-AlienReporter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB5F6AAC8B4454DA41B30470 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlienReporter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3396F432216507D50041147C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3396F452216520340041147C /* ConnectionManager.swift in Sources */,
 				3396F43C216507D50041147C /* ViewController.swift in Sources */,
+				3396F44D21650BDC0041147C /* AlienReport.swift in Sources */,
+				3396F44F21650D6C0041147C /* AlienReporterForm.swift in Sources */,
 				3396F43A216507D50041147C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +377,7 @@
 		};
 		3396F449216507D50041147C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1560F48AF7BFE063CB972B4 /* Pods-AlienReporter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +395,7 @@
 		};
 		3396F44A216507D50041147C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31B877D027D87C3338CD4FD3 /* Pods-AlienReporter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
